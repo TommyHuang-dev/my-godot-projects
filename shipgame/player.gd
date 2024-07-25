@@ -1,9 +1,12 @@
 extends Area2D
 
+@export var drag = 0.5 # percentage "air resistance"
+@export var fric = 20 # constant decceleration
+
 @export var max_speed = 500 # How fast the player will move (pixels/sec).
-@export var fric = 0.3 # percentage "air resistance"
-@export var accel = 1000
-@export var control = 50 # constant decceleration when not accelerationg
+@export var accel = 1000 # nominal acceleration (pixels/sec^2)
+@export var control = PI * 1.5 # max rotation speed (radians/sec)
+
 var vel # current (x, y) velocity
 var screen_size # Size of the game window.
 
@@ -12,14 +15,28 @@ func _ready():
 	screen_size = get_viewport_rect().size
 	vel = Vector2(0, 0)
 
+# slides a towards b by between n and 2n, smoothed
+func slide(a, b, peak, n):
+	var diff = abs(a - b)
+	var max_change = n * (0.5 + min(diff, 0.5))
+	if diff < max_change: return b
+	if a > b: return a - max_change
+	if a < b: return a + max_change
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	# set player rotation to where the mouse is
-	look_at(get_global_mouse_position())
+	#### rotation
+	# turn player towards mouse
+	var s = Vector2.from_angle(rotation)
+	var m = get_global_mouse_position() - position
+	var angle_to_mouse = s.angle_to(m)
+	rotation += slide(0, angle_to_mouse, PI / 2, control * delta)
 	
-	# slowdown due to friction
-	vel -= vel * fric * delta
-	
+	#### movement
+	vel -= vel * drag * delta # percentage slowdown
+	vel -= vel.normalized() * fric * delta # small constant decceleration
+	if vel.length() < fric * delta * 1.5:
+		vel = Vector2(0, 0)
 	# acceleration
 	var accel_vector = Vector2(0, 0) # acceleration vector (forward, sideways)
 	if Input.is_action_pressed("move_forward"):
@@ -31,18 +48,10 @@ func _process(delta):
 	elif Input.is_action_pressed("move_left"):
 		accel_vector.y = -1
 	accel_vector = accel_vector.rotated(self.get_rotation())
-	# if no acceleration, eventually stop the ship
-	if accel_vector.is_zero_approx():
-		vel -= vel.normalized() * 5 * delta # small constant decceleration
-		if vel.length() < 1:
-			vel = Vector2(0, 0)
-	
-	print(accel_vector)
-	
 	vel.x += accel_vector.x * accel * delta
 	vel.y += accel_vector.y * accel * delta
 	if vel.length() > max_speed:
 		vel *= max_speed / vel.length()
 	
 	position += vel * delta
-	
+	print("speed: ", vel.length())
