@@ -54,4 +54,3 @@ func _process(delta):
 		vel *= max_speed / vel.length()
 	
 	position += vel * delta
-	print("speed: ", vel.length())
