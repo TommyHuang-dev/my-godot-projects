@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://5q8l3a3dneih"]
+
+[ext_resource type="Script" path="res://basic_shot.gd" id="1_davbk"]
+[ext_resource type="Texture2D" uid="uid://bx5usrbb2ua51" path="res://sprite_projectile/basic_shot.png" id="1_mjmm8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_246lw"]
+size = Vector2(33.5625, 7.5)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_davbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.21875, -0.25)
+shape = SubResource("RectangleShape2D_246lw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mjmm8")
