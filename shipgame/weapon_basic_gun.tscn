@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://weapon_basic_gun.gd" id="1_fjl1x"]
 [ext_resource type="Texture2D" uid="uid://b7ixt14f05xvg" path="res://sprite_part/basic_gun.png" id="2_uvtxr"]
 
-[node name="Area2D" type="Area2D"]
+[node name="Gun_root" type="Area2D"]
 script = ExtResource("1_fjl1x")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

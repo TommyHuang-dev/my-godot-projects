@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var prop_cooldown = 0.5
+@export var prop_cooldown = 0.25
 var cooldown = 0
 
 # the projectile shot by this weapon
@@ -17,8 +17,8 @@ func _process(delta):
 		cooldown = prop_cooldown
 		
 		var shot_instance = shot_scene.instantiate()
-		shot_instance.speed = 1200
-		shot_instance.lifetime = 1.5
+		shot_instance.speed = 1600
+		shot_instance.lifetime = 1.2
 		shot_instance.rotation = global_rotation
 		shot_instance.position = global_position
 		shot_instance.position += shot_instance.transform.x * 20

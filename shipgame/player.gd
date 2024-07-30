@@ -1,4 +1,5 @@
 extends Area2D
+signal hit
 
 @export var mass = 1000 # "average" ship will have mass = 1000
 @export var thrust = 800 # "average" ship will have thrust = 800
@@ -66,17 +67,19 @@ func accelerate(delta):
 	accel_vector = accel_vector.rotated(self.get_rotation())
 	
 	var effective_accel = accel
+	var boost_max_speed_bonus = 0
 	if Input.is_action_pressed("boost"):
 		effective_accel += boost
+		boost_max_speed_bonus = 200
 	vel.x += accel_vector.x * effective_accel * delta
 	vel.y += accel_vector.y * effective_accel * delta
-	if vel.length() > max_speed:
-		vel *= max_speed / vel.length()
+	
+	if vel.length() > max_speed + boost_max_speed_bonus:
+		vel *= (max_speed + boost_max_speed_bonus) / vel.length()
 	
 	position += vel * delta
+	print(vel.length()  )
 
 func _process(delta):
 	turn(delta)
 	accelerate(delta)
-	if Input.is_action_pressed("primary_fire"):
-		pass  # TODO

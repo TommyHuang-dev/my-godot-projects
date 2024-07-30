@@ -16,8 +16,46 @@ position = Vector2(-29, -30)
 polygon = PackedVector2Array(0, 1, 36, 1, 58, 30, 36, 59, 0, 59)
 
 [node name="TestSquare" type="Sprite2D" parent="."]
-position = Vector2(-60, 0)
+position = Vector2(-16, -60)
 texture = ExtResource("3_8xe5b")
 
-[node name="Area2D" parent="." instance=ExtResource("4_i76bd")]
+[node name="TestSquare2" type="Sprite2D" parent="."]
+position = Vector2(-74, 58)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare3" type="Sprite2D" parent="."]
+position = Vector2(-16, 58)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare4" type="Sprite2D" parent="."]
+position = Vector2(-73, -60)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare5" type="Sprite2D" parent="."]
+position = Vector2(41, -30)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare6" type="Sprite2D" parent="."]
+position = Vector2(-61, 0)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare7" type="Sprite2D" parent="."]
+position = Vector2(41, 27)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare8" type="Sprite2D" parent="."]
+position = Vector2(-73, 115)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare9" type="Sprite2D" parent="."]
+position = Vector2(-74, -118)
+texture = ExtResource("3_8xe5b")
+
+[node name="Gun_root" parent="." instance=ExtResource("4_i76bd")]
 position = Vector2(61, 0)
+
+[node name="Gun_root2" parent="." instance=ExtResource("4_i76bd")]
+position = Vector2(-12, 114)
+
+[node name="Gun_root3" parent="." instance=ExtResource("4_i76bd")]
+position = Vector2(-13, -115)
