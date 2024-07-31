@@ -51,11 +51,24 @@ texture = ExtResource("3_8xe5b")
 position = Vector2(-74, -118)
 texture = ExtResource("3_8xe5b")
 
+[node name="TestSquare10" type="Sprite2D" parent="."]
+position = Vector2(-132, -60)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare11" type="Sprite2D" parent="."]
+position = Vector2(-133, 58)
+texture = ExtResource("3_8xe5b")
+
 [node name="Gun_root" parent="." instance=ExtResource("4_i76bd")]
 position = Vector2(61, 0)
 
 [node name="Gun_root2" parent="." instance=ExtResource("4_i76bd")]
 position = Vector2(-12, 114)
+rotation = 0.523599
 
 [node name="Gun_root3" parent="." instance=ExtResource("4_i76bd")]
-position = Vector2(-13, -115)
+position = Vector2(-13, -117)
+rotation = -0.523599
+
+[node name="Gun_root4" parent="." instance=ExtResource("4_i76bd")]
+position = Vector2(-58, 0)

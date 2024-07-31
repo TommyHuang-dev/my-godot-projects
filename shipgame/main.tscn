@@ -25,6 +25,9 @@ position = Vector2(612, -333)
 texture = ExtResource("4_k1qfg")
 
 [node name="Player" parent="." instance=ExtResource("1_qb1wu")]
+mass = 1000
+dodge_speed = 1555
+dodge_duration = 1.5
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_iijy3")
