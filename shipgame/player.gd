@@ -1,5 +1,4 @@
 extends Area2D
-signal hit
 
 @export var mass = 1200 # "average" ship will have mass = 1000
 @export var thrust = 800 # "average" ship will have thrust = 800
@@ -101,3 +100,7 @@ func accelerate(delta):
 func _process(delta):
 	turn(delta)
 	accelerate(delta)
+
+
+func _on_body_entered(body):
+	pass # Replace with function body.

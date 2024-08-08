@@ -1,10 +1,5 @@
 extends Area2D
 
-# TODO should make a projectile class
-var speed = 100
-var max_range = 1000
-var lifetime = 1
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,14 +7,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if lifetime <= 0:
-		queue_free()
-	var vel_vec = transform.x * speed * delta
-	position += vel_vec
-	lifetime -= delta
+	pass
 
 
 func _on_area_entered(area):
-	print("projectile hit!")
+	print("target hit!")
 	$CollisionShape2D.set_deferred("disabled", true)
 	queue_free()

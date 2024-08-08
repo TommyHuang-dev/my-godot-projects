@@ -3,26 +3,10 @@
 [ext_resource type="Script" path="res://main.gd" id="1_2p2yt"]
 [ext_resource type="PackedScene" uid="uid://d0l2oj1tl5uxh" path="res://player.tscn" id="1_qb1wu"]
 [ext_resource type="Script" path="res://Camera2D.gd" id="3_iijy3"]
-[ext_resource type="Texture2D" uid="uid://1mg0qmydkkfb" path="res://sprite_part/test_square.png" id="4_k1qfg"]
+[ext_resource type="PackedScene" uid="uid://r071y7frwdpn" path="res://target.tscn" id="4_aamtk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_2p2yt")
-
-[node name="TestSquare" type="Sprite2D" parent="."]
-position = Vector2(-613, -331)
-texture = ExtResource("4_k1qfg")
-
-[node name="TestSquare2" type="Sprite2D" parent="."]
-position = Vector2(-612, 330)
-texture = ExtResource("4_k1qfg")
-
-[node name="TestSquare3" type="Sprite2D" parent="."]
-position = Vector2(613, 332)
-texture = ExtResource("4_k1qfg")
-
-[node name="TestSquare4" type="Sprite2D" parent="."]
-position = Vector2(612, -333)
-texture = ExtResource("4_k1qfg")
 
 [node name="Player" parent="." instance=ExtResource("1_qb1wu")]
 mass = 1000
@@ -31,3 +15,36 @@ dodge_duration = 1.5
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_iijy3")
+
+[node name="Target" parent="." instance=ExtResource("4_aamtk")]
+position = Vector2(-609, -331)
+
+[node name="Target2" parent="." instance=ExtResource("4_aamtk")]
+position = Vector2(612, 334)
+
+[node name="Target3" parent="." instance=ExtResource("4_aamtk")]
+position = Vector2(609, -333)
+
+[node name="Target4" parent="." instance=ExtResource("4_aamtk")]
+position = Vector2(-612, 333)
+
+[node name="Target5" parent="." instance=ExtResource("4_aamtk")]
+position = Vector2(4, 326)
+
+[node name="Target6" parent="." instance=ExtResource("4_aamtk")]
+position = Vector2(609, -3)
+
+[node name="Target7" parent="." instance=ExtResource("4_aamtk")]
+position = Vector2(-2, -329)
+
+[node name="Target8" parent="." instance=ExtResource("4_aamtk")]
+position = Vector2(-610, -2)
+
+[node name="Target9" parent="." instance=ExtResource("4_aamtk")]
+position = Vector2(-550, -276)
+
+[node name="Target10" parent="." instance=ExtResource("4_aamtk")]
+position = Vector2(-611, -274)
+
+[node name="Target11" parent="." instance=ExtResource("4_aamtk")]
+position = Vector2(-550, -331)
