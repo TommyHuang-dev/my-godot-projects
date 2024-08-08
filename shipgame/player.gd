@@ -12,8 +12,8 @@ var vel # current (x, y) velocity
 
 var screen_size # Size of the game window.
 
-@export var dodge_speed = 700 # max dodge boost
-@export var dodge_duration = 2. # decays over this duration
+@export var dodge_speed = 400 # max dodge boost
+@export var dodge_duration = 1.5 # decays over this duration
 var curr_dodge_vec = Vector2.ZERO
 var dodge_decay_factor = 0. # starts at 1 when dodging, decays to 0 over duration
 
@@ -75,11 +75,10 @@ func accelerate(delta):
 		accel_vector.y = 1
 	elif Input.is_action_pressed("move_left"):
 		accel_vector.y = -1
-	accel_vector = accel_vector.rotated(self.get_rotation())
+	accel_vector = accel_vector.normalized().rotated(self.get_rotation())
 	
-	var effective_accel = accel
-	vel.x += accel_vector.x * effective_accel * delta
-	vel.y += accel_vector.y * effective_accel * delta
+	vel.x += accel_vector.x * accel * delta
+	vel.y += accel_vector.y * accel * delta
 	
 	if vel.length() > max_speed:
 		vel *= (max_speed) / vel.length()
@@ -92,10 +91,12 @@ func accelerate(delta):
 			curr_dodge_vec = accel_vector * dodge_speed
 		else:
 			curr_dodge_vec = transform.x * dodge_speed
-	position += curr_dodge_vec * dodge_decay_factor * delta
 	if dodge_decay_factor > 0:
+		position += curr_dodge_vec * dodge_decay_factor * delta
+		print(curr_dodge_vec)
+		print(dodge_decay_factor)
 		dodge_decay_factor -= (delta / dodge_duration)
-		dodge_decay_factor = max(dodge_decay_factor, 0)
+	dodge_decay_factor = max(dodge_decay_factor, 0)
 
 func _process(delta):
 	turn(delta)
