@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0l2oj1tl5uxh"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_gs4um"]
-[ext_resource type="Texture2D" uid="uid://c6qldrhx8ywsi" path="res://sprite_part/ship.png" id="1_oidtv"]
+[ext_resource type="Texture2D" uid="uid://ulomv1v8lw3b" path="res://sprite_part/ship_core.png" id="2_h6yv4"]
 [ext_resource type="Texture2D" uid="uid://1mg0qmydkkfb" path="res://sprite_part/test_square.png" id="3_8xe5b"]
 [ext_resource type="PackedScene" uid="uid://dptv1i8qwb8er" path="res://weapon_basic_gun.tscn" id="4_i76bd"]
 
@@ -9,64 +9,129 @@
 collision_mask = 0
 script = ExtResource("1_gs4um")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_oidtv")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-29, -30)
+position = Vector2(-42, -45)
+scale = Vector2(1.49138, 1.49138)
 polygon = PackedVector2Array(0, 1, 36, 1, 58, 30, 36, 59, 0, 59)
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_h6yv4")
+
 [node name="TestSquare" type="Sprite2D" parent="."]
-position = Vector2(-16, -60)
+position = Vector2(-28, -58)
 texture = ExtResource("3_8xe5b")
 
 [node name="TestSquare2" type="Sprite2D" parent="."]
-position = Vector2(-74, 58)
+position = Vector2(1, -58)
 texture = ExtResource("3_8xe5b")
 
 [node name="TestSquare3" type="Sprite2D" parent="."]
-position = Vector2(-16, 58)
+position = Vector2(-57, -58)
 texture = ExtResource("3_8xe5b")
 
 [node name="TestSquare4" type="Sprite2D" parent="."]
-position = Vector2(-73, -60)
+position = Vector2(30, -58)
 texture = ExtResource("3_8xe5b")
 
 [node name="TestSquare5" type="Sprite2D" parent="."]
-position = Vector2(41, -30)
+position = Vector2(1, 58)
 texture = ExtResource("3_8xe5b")
 
 [node name="TestSquare6" type="Sprite2D" parent="."]
-position = Vector2(-61, 0)
+position = Vector2(-28, 58)
 texture = ExtResource("3_8xe5b")
 
 [node name="TestSquare7" type="Sprite2D" parent="."]
-position = Vector2(41, 27)
+position = Vector2(-57, 58)
 texture = ExtResource("3_8xe5b")
 
 [node name="TestSquare8" type="Sprite2D" parent="."]
-position = Vector2(-73, 115)
+position = Vector2(-57, 29)
 texture = ExtResource("3_8xe5b")
 
 [node name="TestSquare9" type="Sprite2D" parent="."]
-position = Vector2(-74, -118)
+position = Vector2(-57, 0)
 texture = ExtResource("3_8xe5b")
 
 [node name="TestSquare10" type="Sprite2D" parent="."]
-position = Vector2(-132, -60)
+position = Vector2(-57, -29)
 texture = ExtResource("3_8xe5b")
 
 [node name="TestSquare11" type="Sprite2D" parent="."]
-position = Vector2(-133, 58)
+position = Vector2(30, 58)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare12" type="Sprite2D" parent="."]
+position = Vector2(59, -29)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare13" type="Sprite2D" parent="."]
+position = Vector2(59, -58)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare14" type="Sprite2D" parent="."]
+position = Vector2(59, 0)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare15" type="Sprite2D" parent="."]
+position = Vector2(59, 58)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare16" type="Sprite2D" parent="."]
+position = Vector2(59, 29)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare17" type="Sprite2D" parent="."]
+position = Vector2(88, 58)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare18" type="Sprite2D" parent="."]
+position = Vector2(88, 0)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare19" type="Sprite2D" parent="."]
+position = Vector2(88, 58)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare20" type="Sprite2D" parent="."]
+position = Vector2(88, -58)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare21" type="Sprite2D" parent="."]
+position = Vector2(117, -29)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare22" type="Sprite2D" parent="."]
+position = Vector2(147, -1)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare23" type="Sprite2D" parent="."]
+position = Vector2(117, 29)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare24" type="Sprite2D" parent="."]
+position = Vector2(-86, -29)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare25" type="Sprite2D" parent="."]
+position = Vector2(-28, -87)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare26" type="Sprite2D" parent="."]
+position = Vector2(-86, 29)
+texture = ExtResource("3_8xe5b")
+
+[node name="TestSquare27" type="Sprite2D" parent="."]
+position = Vector2(-28, 87)
 texture = ExtResource("3_8xe5b")
 
 [node name="Gun_root" parent="." instance=ExtResource("4_i76bd")]
-position = Vector2(61, 0)
+position = Vector2(118, 0)
 
 [node name="Gun_root2" parent="." instance=ExtResource("4_i76bd")]
-position = Vector2(-12, 114)
+position = Vector2(88, 30)
 
 [node name="Gun_root3" parent="." instance=ExtResource("4_i76bd")]
-position = Vector2(-13, -117)
+position = Vector2(88, -29)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

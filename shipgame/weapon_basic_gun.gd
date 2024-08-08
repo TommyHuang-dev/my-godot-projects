@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var prop_cooldown = 0.5
+@export var prop_cooldown = 0.25
 var cooldown = 0
 
 # the projectile shot by this weapon

@@ -9,74 +9,72 @@
 [node name="Main" type="Node2D"]
 script = ExtResource("1_2p2yt")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("3_iijy3")
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-scroll_ignore_camera_zoom = true
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.05, 0.05)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(113, 561)
-scale = Vector2(0.623226, 0.623226)
-texture = ExtResource("2_rntc1")
-
 [node name="GameObjects" type="Node" parent="."]
 
-[node name="Player" parent="GameObjects" groups=["PlayerGroup"] instance=ExtResource("1_qb1wu")]
+[node name="Player" parent="GameObjects" instance=ExtResource("1_qb1wu")]
+
+[node name="Camera2D" type="Camera2D" parent="GameObjects/Player"]
+script = ExtResource("3_iijy3")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="GameObjects/Player/Camera2D"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="GameObjects/Player/Camera2D/ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="GameObjects/Player/Camera2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2(-806, 546)
+scale = Vector2(2, 2)
+texture = ExtResource("2_rntc1")
 
 [node name="Target" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(-784, -434)
+position = Vector2(-609, -331)
 
 [node name="Target2" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(782, 432)
+position = Vector2(612, 334)
 
 [node name="Target3" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(784, -434)
+position = Vector2(609, -333)
 
 [node name="Target4" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(-784, 432)
+position = Vector2(-612, 333)
 
 [node name="Target5" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(0, 434)
+position = Vector2(4, 326)
 
 [node name="Target6" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(784, -1)
+position = Vector2(609, -3)
 
 [node name="Target7" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(0, -435)
+position = Vector2(-2, -329)
 
 [node name="Target8" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(-784, -4)
+position = Vector2(-610, -2)
 
 [node name="Target9" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(-725, -379)
+position = Vector2(-550, -276)
 
 [node name="Target10" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(-786, -377)
+position = Vector2(-611, -274)
 
 [node name="Target11" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(-725, -434)
+position = Vector2(-550, -331)
 
 [node name="Target12" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1169, -379)
+position = Vector2(1088, -361)
 
 [node name="Target13" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1003, -645)
+position = Vector2(922, -627)
 
 [node name="Target14" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1174, -738)
+position = Vector2(1093, -720)
 
 [node name="Target15" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1007, -483)
+position = Vector2(926, -465)
 
 [node name="Target16" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1342, -471)
+position = Vector2(1261, -453)
 
 [node name="Target17" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1340, -648)
+position = Vector2(1259, -630)
 
 [node name="Target18" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1173, -558)
+position = Vector2(1092, -540)

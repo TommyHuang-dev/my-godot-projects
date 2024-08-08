@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://1mg0qmydkkfb" path="res://sprite_part/test_square.png" id="1_jddu4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ofd1u"]
-size = Vector2(62, 61)
+size = Vector2(32, 32)
 
 [node name="Target" type="Area2D"]
 collision_layer = 4
@@ -12,7 +12,6 @@ collision_mask = 2
 script = ExtResource("1_f2r6x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_ofd1u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -31,16 +31,16 @@ func _ready():
 	
 	vel = Vector2(0, 0)
 	
-	print("BASE STATS")
-	print("mass: ", mass)
-	print("thrust: ", thrust)
-	print("\nDERIVED STATS")
-	print("drag: ", drag)
-	print("friction: ", fric)
-	print("max_speed: ", max_speed)
-	print("accel: ", accel)
-	print("control penalty:", size_control_penalty)
-	print("control: ", control)
+	#print("BASE STATS")
+	#print("mass: ", mass)
+	#print("thrust: ", thrust)
+	#print("\nDERIVED STATS")
+	#print("drag: ", drag)
+	#print("friction: ", fric)
+	#print("max_speed: ", max_speed)
+	#print("accel: ", accel)
+	#print("control penalty:", size_control_penalty)
+	#print("control: ", control)
 
 # slides a towards b by between n and 2n, smoothed
 func slide(a, b, peak, n):
