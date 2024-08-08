@@ -16,11 +16,11 @@ script = ExtResource("3_iijy3")
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.05, 0.05)
+motion_scale = Vector2(0.08, 0.08)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(113, 561)
-scale = Vector2(0.623226, 0.623226)
+position = Vector2(1043, 751)
+scale = Vector2(0.813226, 0.813226)
 texture = ExtResource("2_rntc1")
 
 [node name="GameObjects" type="Node" parent="."]
