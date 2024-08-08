@@ -11,5 +11,5 @@ func _process(delta):
 		var player_pos = PlayerGroup[0].position
 		position = player_pos  # for now, have the camera follow the player
 		var distance = player_pos.length()
-		var distance_zoom = 1 / clamp(distance / 200, 1, 4)
+		var distance_zoom = 1 / clamp(distance / 400, 1, 2)
 		set_zoom(Vector2(distance_zoom, distance_zoom))
