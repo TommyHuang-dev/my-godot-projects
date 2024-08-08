@@ -27,56 +27,319 @@ texture = ExtResource("2_rntc1")
 
 [node name="Player" parent="GameObjects" groups=["PlayerGroup"] instance=ExtResource("1_qb1wu")]
 
-[node name="Target" parent="GameObjects" instance=ExtResource("4_aamtk")]
+[node name="RandomTargets" type="Node" parent="GameObjects"]
+
+[node name="Target" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
 position = Vector2(-784, -434)
 
-[node name="Target2" parent="GameObjects" instance=ExtResource("4_aamtk")]
+[node name="Target2" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
 position = Vector2(782, 432)
 
-[node name="Target3" parent="GameObjects" instance=ExtResource("4_aamtk")]
+[node name="Target3" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
 position = Vector2(784, -434)
 
-[node name="Target4" parent="GameObjects" instance=ExtResource("4_aamtk")]
+[node name="Target4" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
 position = Vector2(-784, 432)
 
-[node name="Target5" parent="GameObjects" instance=ExtResource("4_aamtk")]
+[node name="Target5" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
 position = Vector2(0, 434)
 
-[node name="Target6" parent="GameObjects" instance=ExtResource("4_aamtk")]
+[node name="Target6" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
 position = Vector2(784, -1)
 
-[node name="Target7" parent="GameObjects" instance=ExtResource("4_aamtk")]
+[node name="Target7" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
 position = Vector2(0, -435)
 
-[node name="Target8" parent="GameObjects" instance=ExtResource("4_aamtk")]
+[node name="Target8" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
 position = Vector2(-784, -4)
 
-[node name="Target9" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(-725, -379)
+[node name="Target9" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
+position = Vector2(-750, -400)
 
-[node name="Target10" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(-786, -377)
+[node name="Target10" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
+position = Vector2(-784, -400)
 
-[node name="Target11" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(-725, -434)
+[node name="Target11" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
+position = Vector2(-750, -434)
 
-[node name="Target12" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1169, -379)
+[node name="Target12" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
+position = Vector2(-768, -892)
 
-[node name="Target13" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1003, -645)
+[node name="Target13" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
+position = Vector2(-934, -1158)
 
-[node name="Target14" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1174, -738)
+[node name="Target14" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
+position = Vector2(-763, -1251)
 
-[node name="Target15" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1007, -483)
+[node name="Target15" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
+position = Vector2(-930, -996)
 
-[node name="Target16" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1342, -471)
+[node name="Target16" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
+position = Vector2(-595, -984)
 
-[node name="Target17" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1340, -648)
+[node name="Target17" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
+position = Vector2(-597, -1161)
 
-[node name="Target18" parent="GameObjects" instance=ExtResource("4_aamtk")]
-position = Vector2(1173, -558)
+[node name="Target18" parent="GameObjects/RandomTargets" instance=ExtResource("4_aamtk")]
+position = Vector2(-764, -1071)
+
+[node name="TargetCluster" type="Node" parent="GameObjects"]
+
+[node name="Target19" parent="GameObjects/TargetCluster" instance=ExtResource("4_aamtk")]
+position = Vector2(1517, -87)
+
+[node name="Target22" parent="GameObjects/TargetCluster" instance=ExtResource("4_aamtk")]
+position = Vector2(1547, -87)
+
+[node name="Target24" parent="GameObjects/TargetCluster" instance=ExtResource("4_aamtk")]
+position = Vector2(1577, -87)
+
+[node name="Target20" parent="GameObjects/TargetCluster" instance=ExtResource("4_aamtk")]
+position = Vector2(1517, -116)
+
+[node name="Target23" parent="GameObjects/TargetCluster" instance=ExtResource("4_aamtk")]
+position = Vector2(1547, -116)
+
+[node name="Target25" parent="GameObjects/TargetCluster" instance=ExtResource("4_aamtk")]
+position = Vector2(1577, -116)
+
+[node name="Target21" parent="GameObjects/TargetCluster" instance=ExtResource("4_aamtk")]
+position = Vector2(1517, -58)
+
+[node name="Target26" parent="GameObjects/TargetCluster" instance=ExtResource("4_aamtk")]
+position = Vector2(1547, -58)
+
+[node name="Target31" parent="GameObjects/TargetCluster" instance=ExtResource("4_aamtk")]
+position = Vector2(1577, -58)
+
+[node name="TargetCluster2" type="Node" parent="GameObjects"]
+
+[node name="Target19" parent="GameObjects/TargetCluster2" instance=ExtResource("4_aamtk")]
+position = Vector2(1425, 3)
+
+[node name="Target22" parent="GameObjects/TargetCluster2" instance=ExtResource("4_aamtk")]
+position = Vector2(1455, 3)
+
+[node name="Target24" parent="GameObjects/TargetCluster2" instance=ExtResource("4_aamtk")]
+position = Vector2(1485, 3)
+
+[node name="Target20" parent="GameObjects/TargetCluster2" instance=ExtResource("4_aamtk")]
+position = Vector2(1425, -26)
+
+[node name="Target23" parent="GameObjects/TargetCluster2" instance=ExtResource("4_aamtk")]
+position = Vector2(1455, -26)
+
+[node name="Target25" parent="GameObjects/TargetCluster2" instance=ExtResource("4_aamtk")]
+position = Vector2(1485, -26)
+
+[node name="Target21" parent="GameObjects/TargetCluster2" instance=ExtResource("4_aamtk")]
+position = Vector2(1425, 32)
+
+[node name="Target26" parent="GameObjects/TargetCluster2" instance=ExtResource("4_aamtk")]
+position = Vector2(1455, 32)
+
+[node name="Target31" parent="GameObjects/TargetCluster2" instance=ExtResource("4_aamtk")]
+position = Vector2(1485, 32)
+
+[node name="TargetCluster3" type="Node" parent="GameObjects"]
+
+[node name="Target19" parent="GameObjects/TargetCluster3" instance=ExtResource("4_aamtk")]
+position = Vector2(1517, 93)
+
+[node name="Target22" parent="GameObjects/TargetCluster3" instance=ExtResource("4_aamtk")]
+position = Vector2(1547, 93)
+
+[node name="Target24" parent="GameObjects/TargetCluster3" instance=ExtResource("4_aamtk")]
+position = Vector2(1577, 93)
+
+[node name="Target20" parent="GameObjects/TargetCluster3" instance=ExtResource("4_aamtk")]
+position = Vector2(1517, 64)
+
+[node name="Target23" parent="GameObjects/TargetCluster3" instance=ExtResource("4_aamtk")]
+position = Vector2(1547, 64)
+
+[node name="Target25" parent="GameObjects/TargetCluster3" instance=ExtResource("4_aamtk")]
+position = Vector2(1577, 64)
+
+[node name="Target21" parent="GameObjects/TargetCluster3" instance=ExtResource("4_aamtk")]
+position = Vector2(1517, 122)
+
+[node name="Target26" parent="GameObjects/TargetCluster3" instance=ExtResource("4_aamtk")]
+position = Vector2(1547, 122)
+
+[node name="Target31" parent="GameObjects/TargetCluster3" instance=ExtResource("4_aamtk")]
+position = Vector2(1577, 122)
+
+[node name="TargetCluster4" type="Node" parent="GameObjects"]
+
+[node name="Target19" parent="GameObjects/TargetCluster4" instance=ExtResource("4_aamtk")]
+position = Vector2(1609, 183)
+
+[node name="Target22" parent="GameObjects/TargetCluster4" instance=ExtResource("4_aamtk")]
+position = Vector2(1639, 183)
+
+[node name="Target24" parent="GameObjects/TargetCluster4" instance=ExtResource("4_aamtk")]
+position = Vector2(1669, 183)
+
+[node name="Target20" parent="GameObjects/TargetCluster4" instance=ExtResource("4_aamtk")]
+position = Vector2(1609, 154)
+
+[node name="Target23" parent="GameObjects/TargetCluster4" instance=ExtResource("4_aamtk")]
+position = Vector2(1639, 154)
+
+[node name="Target25" parent="GameObjects/TargetCluster4" instance=ExtResource("4_aamtk")]
+position = Vector2(1669, 154)
+
+[node name="Target21" parent="GameObjects/TargetCluster4" instance=ExtResource("4_aamtk")]
+position = Vector2(1609, 212)
+
+[node name="Target26" parent="GameObjects/TargetCluster4" instance=ExtResource("4_aamtk")]
+position = Vector2(1639, 212)
+
+[node name="Target31" parent="GameObjects/TargetCluster4" instance=ExtResource("4_aamtk")]
+position = Vector2(1669, 212)
+
+[node name="TargetCluster5" type="Node" parent="GameObjects"]
+
+[node name="Target19" parent="GameObjects/TargetCluster5" instance=ExtResource("4_aamtk")]
+position = Vector2(1701, 93)
+
+[node name="Target22" parent="GameObjects/TargetCluster5" instance=ExtResource("4_aamtk")]
+position = Vector2(1731, 93)
+
+[node name="Target24" parent="GameObjects/TargetCluster5" instance=ExtResource("4_aamtk")]
+position = Vector2(1761, 93)
+
+[node name="Target20" parent="GameObjects/TargetCluster5" instance=ExtResource("4_aamtk")]
+position = Vector2(1701, 64)
+
+[node name="Target23" parent="GameObjects/TargetCluster5" instance=ExtResource("4_aamtk")]
+position = Vector2(1731, 64)
+
+[node name="Target25" parent="GameObjects/TargetCluster5" instance=ExtResource("4_aamtk")]
+position = Vector2(1761, 64)
+
+[node name="Target21" parent="GameObjects/TargetCluster5" instance=ExtResource("4_aamtk")]
+position = Vector2(1701, 122)
+
+[node name="Target26" parent="GameObjects/TargetCluster5" instance=ExtResource("4_aamtk")]
+position = Vector2(1731, 122)
+
+[node name="Target31" parent="GameObjects/TargetCluster5" instance=ExtResource("4_aamtk")]
+position = Vector2(1761, 122)
+
+[node name="TargetCluster6" type="Node" parent="GameObjects"]
+
+[node name="Target19" parent="GameObjects/TargetCluster6" instance=ExtResource("4_aamtk")]
+position = Vector2(1793, 3)
+
+[node name="Target22" parent="GameObjects/TargetCluster6" instance=ExtResource("4_aamtk")]
+position = Vector2(1823, 3)
+
+[node name="Target24" parent="GameObjects/TargetCluster6" instance=ExtResource("4_aamtk")]
+position = Vector2(1853, 3)
+
+[node name="Target20" parent="GameObjects/TargetCluster6" instance=ExtResource("4_aamtk")]
+position = Vector2(1793, -26)
+
+[node name="Target23" parent="GameObjects/TargetCluster6" instance=ExtResource("4_aamtk")]
+position = Vector2(1823, -26)
+
+[node name="Target25" parent="GameObjects/TargetCluster6" instance=ExtResource("4_aamtk")]
+position = Vector2(1853, -26)
+
+[node name="Target21" parent="GameObjects/TargetCluster6" instance=ExtResource("4_aamtk")]
+position = Vector2(1793, 32)
+
+[node name="Target26" parent="GameObjects/TargetCluster6" instance=ExtResource("4_aamtk")]
+position = Vector2(1823, 32)
+
+[node name="Target31" parent="GameObjects/TargetCluster6" instance=ExtResource("4_aamtk")]
+position = Vector2(1853, 32)
+
+[node name="TargetCluster7" type="Node" parent="GameObjects"]
+
+[node name="Target19" parent="GameObjects/TargetCluster7" instance=ExtResource("4_aamtk")]
+position = Vector2(1701, -87)
+
+[node name="Target22" parent="GameObjects/TargetCluster7" instance=ExtResource("4_aamtk")]
+position = Vector2(1731, -87)
+
+[node name="Target24" parent="GameObjects/TargetCluster7" instance=ExtResource("4_aamtk")]
+position = Vector2(1761, -87)
+
+[node name="Target20" parent="GameObjects/TargetCluster7" instance=ExtResource("4_aamtk")]
+position = Vector2(1701, -116)
+
+[node name="Target23" parent="GameObjects/TargetCluster7" instance=ExtResource("4_aamtk")]
+position = Vector2(1731, -116)
+
+[node name="Target25" parent="GameObjects/TargetCluster7" instance=ExtResource("4_aamtk")]
+position = Vector2(1761, -116)
+
+[node name="Target21" parent="GameObjects/TargetCluster7" instance=ExtResource("4_aamtk")]
+position = Vector2(1701, -58)
+
+[node name="Target26" parent="GameObjects/TargetCluster7" instance=ExtResource("4_aamtk")]
+position = Vector2(1731, -58)
+
+[node name="Target31" parent="GameObjects/TargetCluster7" instance=ExtResource("4_aamtk")]
+position = Vector2(1761, -58)
+
+[node name="TargetCluster8" type="Node" parent="GameObjects"]
+
+[node name="Target19" parent="GameObjects/TargetCluster8" instance=ExtResource("4_aamtk")]
+position = Vector2(1609, -177)
+
+[node name="Target22" parent="GameObjects/TargetCluster8" instance=ExtResource("4_aamtk")]
+position = Vector2(1639, -177)
+
+[node name="Target24" parent="GameObjects/TargetCluster8" instance=ExtResource("4_aamtk")]
+position = Vector2(1669, -177)
+
+[node name="Target20" parent="GameObjects/TargetCluster8" instance=ExtResource("4_aamtk")]
+position = Vector2(1609, -206)
+
+[node name="Target23" parent="GameObjects/TargetCluster8" instance=ExtResource("4_aamtk")]
+position = Vector2(1639, -206)
+
+[node name="Target25" parent="GameObjects/TargetCluster8" instance=ExtResource("4_aamtk")]
+position = Vector2(1669, -206)
+
+[node name="Target21" parent="GameObjects/TargetCluster8" instance=ExtResource("4_aamtk")]
+position = Vector2(1609, -148)
+
+[node name="Target26" parent="GameObjects/TargetCluster8" instance=ExtResource("4_aamtk")]
+position = Vector2(1639, -148)
+
+[node name="Target31" parent="GameObjects/TargetCluster8" instance=ExtResource("4_aamtk")]
+position = Vector2(1669, -148)
+
+[node name="TargetCluster9" type="Node" parent="GameObjects"]
+
+[node name="Target19" parent="GameObjects/TargetCluster9" instance=ExtResource("4_aamtk")]
+position = Vector2(1609, 3)
+
+[node name="Target22" parent="GameObjects/TargetCluster9" instance=ExtResource("4_aamtk")]
+position = Vector2(1639, 3)
+
+[node name="Target24" parent="GameObjects/TargetCluster9" instance=ExtResource("4_aamtk")]
+position = Vector2(1669, 3)
+
+[node name="Target20" parent="GameObjects/TargetCluster9" instance=ExtResource("4_aamtk")]
+position = Vector2(1609, -26)
+
+[node name="Target23" parent="GameObjects/TargetCluster9" instance=ExtResource("4_aamtk")]
+position = Vector2(1639, -26)
+
+[node name="Target25" parent="GameObjects/TargetCluster9" instance=ExtResource("4_aamtk")]
+position = Vector2(1669, -26)
+
+[node name="Target21" parent="GameObjects/TargetCluster9" instance=ExtResource("4_aamtk")]
+position = Vector2(1609, 32)
+
+[node name="Target26" parent="GameObjects/TargetCluster9" instance=ExtResource("4_aamtk")]
+position = Vector2(1639, 32)
+
+[node name="Target31" parent="GameObjects/TargetCluster9" instance=ExtResource("4_aamtk")]
+position = Vector2(1669, 32)
