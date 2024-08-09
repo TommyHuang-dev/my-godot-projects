@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var mass = 1200 # "average" ship will have mass = 1000
-@export var thrust = 800 # "average" ship will have thrust = 800
+@export var thrust = 1400 # "average" ship will have thrust = 800
 var drag
 var fric
 var max_speed
@@ -24,7 +24,7 @@ func _ready():
 	drag = 0.75 # percentage "air resistance"
 	fric = 20 + mass * 0.02 # constant decceleration
 
-	max_speed = max(600 + (thrust - mass) * 0.1, 300) # How fast the player will move (pixels/sec).
+	max_speed = max(800 + (thrust - mass) * 0.1, 300) # How fast the player will move (pixels/sec).
 	accel = thrust * 1000 / mass # nominal acceleration (pixels/sec^2)
 	size_control_penalty = max(pow(100 + mass * 0.005, 0.5) - 9, 1)
 	control = (2 * PI) * thrust / (mass * size_control_penalty) # max rotation speed (radians/sec)

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bq0h5wlci6xoi"]
+[gd_scene load_steps=7 format=3 uid="uid://bq0h5wlci6xoi"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_2p2yt"]
 [ext_resource type="PackedScene" uid="uid://d0l2oj1tl5uxh" path="res://player.tscn" id="1_qb1wu"]
 [ext_resource type="Texture2D" uid="uid://bpvvjkkjepefg" path="res://large_images/parallax/Nasa_mars_composite.jpg" id="2_rntc1"]
 [ext_resource type="Script" path="res://Camera2D.gd" id="3_iijy3"]
 [ext_resource type="PackedScene" uid="uid://r071y7frwdpn" path="res://target.tscn" id="4_aamtk"]
+[ext_resource type="Texture2D" uid="uid://b0talrbme8vn1" path="res://large_images/parallax/close_dust.png" id="4_l6km1"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_2p2yt")
@@ -13,15 +14,22 @@ script = ExtResource("1_2p2yt")
 script = ExtResource("3_iijy3")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-scroll_ignore_camera_zoom = true
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.08, 0.08)
+[node name="Far parallax" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(800, 450)
+motion_scale = Vector2(0.05, 0.05)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1043, 751)
-scale = Vector2(0.813226, 0.813226)
+[node name="Planet" type="Sprite2D" parent="ParallaxBackground/Far parallax"]
+position = Vector2(1443, 1031)
+scale = Vector2(1.15113, 1.15113)
 texture = ExtResource("2_rntc1")
+
+[node name="Close parallax" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(5000, 4000)
+
+[node name="Dust" type="Sprite2D" parent="ParallaxBackground/Close parallax"]
+texture = ExtResource("4_l6km1")
 
 [node name="GameObjects" type="Node" parent="."]
 
