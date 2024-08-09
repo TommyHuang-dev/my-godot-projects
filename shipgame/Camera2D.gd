@@ -6,8 +6,8 @@ func _ready():
 	pass # Replace with function body.
 
 var offset_difference_move_multi = 3
-var mouse_offset_smoothing_min_move = 40
-var mouse_offset_smoothing_max_move = 400
+var mouse_offset_smoothing_min_move = 50
+var mouse_offset_smoothing_max_move = 500
 var mouse_offset = Vector2(0, 0)
 
 func _process(delta):
