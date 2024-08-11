@@ -11,9 +11,9 @@ var mouse_offset_smoothing_max_move = 500
 var mouse_offset = Vector2(0, 0)
 
 func _process(delta):
-	var PlayerGroup = get_tree().get_nodes_in_group("PlayerGroup")
-	if len(PlayerGroup) > 0:
-		var player_pos = PlayerGroup[0].position
+	var player_group = get_tree().get_nodes_in_group("PlayerGroup")
+	if len(player_group) > 0:
+		var player_pos = player_group[0].position
 		
 		var target_offset = get_local_mouse_position() / 4
 		# TODO clean up this code
