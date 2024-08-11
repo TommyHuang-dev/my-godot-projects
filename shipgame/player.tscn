@@ -127,11 +127,14 @@ texture = ExtResource("3_8xe5b")
 
 [node name="Gun_root" parent="." instance=ExtResource("4_i76bd")]
 position = Vector2(118, 0)
+prop_cooldown = 0.1
 
 [node name="Gun_root2" parent="." instance=ExtResource("4_i76bd")]
 position = Vector2(88, 30)
+prop_cooldown = 0.1
 
 [node name="Gun_root3" parent="." instance=ExtResource("4_i76bd")]
 position = Vector2(88, -29)
+prop_cooldown = 0.1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
